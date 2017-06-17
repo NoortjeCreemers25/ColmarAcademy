@@ -1,0 +1,133 @@
+/* General lay out */
+html{
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header, div, main, footer {
+  border: 1px solid red;
+  padding: 10px;
+}
+
+.flexcontainer{
+  display: flex;
+}
+
+header, footer {
+  justify-content: space-between;
+}
+
+.nav {
+  justify-content: space-around;
+}
+
+main, div .right, div .left, .texts, .blocks .block, .banner4 .blocks, .banner3, .banner4, .block2{
+  flex-direction: column;
+}
+
+.left{
+  width: 60%;
+}
+
+.banner1 .right{
+  flex-grow: 1;
+}
+
+.banner2 .right, .banner4 .right{
+  width: 423px;
+}
+
+.banner2 .right .image, .banner4 .right .image{
+  width: 35%;
+}
+
+.banner2 .right .texts, .banner4 .right .texts{
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.banner2 .right .block, .banner4 .right .block{
+  height: 168px;
+}
+
+.banner2 .right, .banner4 .right{
+  flex-grow: 1;
+}
+
+.banner3 .blocks{
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.left {
+  justify-content: center;
+}
+
+/* Header lay out */
+
+header{
+  height: 4rem;
+  align-items: center;
+}
+
+.nav-item{
+  margin-left: 0.5rem;
+}
+
+.nav-phone{
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* First banner lay out */
+.banner1 .image{
+  margin: 1rem 2.5rem 1rem 0;
+}
+
+/* Third banner lay out */
+.banner3 .block{
+  margin: 1rem;
+}
+
+.block2{
+  max-height: 220px;
+}
+
+/* Desktop size */
+@media only screen and (min-width: 480px){
+  .banner0, .nav-phone{
+    display: none;
+  }
+
+  header, main, footer{
+    padding-left: 1.5rem;
+  }
+}
+
+/* Phone size */
+@media only screen and (max-width: 480px){
+  header, main, footer{
+    padding-left: 1rem;
+  }
+
+  .banner0{
+    height: 180px;
+  }
+
+  .logo-text, .nav, .banner1 .left, .banner2 .left, .banner3 .image,
+  .banner3 .text, .banner4 .right, .banner4 .left .texts, footer .text2{
+    display: none;
+  }
+
+  .banner2 .block, .banner3 .blocks{
+    flex-direction: column;
+  }
+
+  .banner2 .right .image, .banner4 .left{
+    width: 100%;
+  }
+}
