@@ -1,6 +1,8 @@
 /* General lay out */
 html{
   font-size: 16px;
+  font-family: 'Muli', sans-serif;
+  color: #7B0707;
 }
 
 * {
@@ -28,20 +30,24 @@ main, div .right, div .left, .texts, .blocks .block, .banner4 .blocks, .banner3,
   flex-direction: column;
 }
 
+strong{
+  font-weight: bold;
+}
+
 .left{
   width: 60%;
 }
 
-.banner1 .right{
-  flex-grow: 1;
-}
-
-.banner2 .right, .banner4 .right{
+.banner1 .right, .banner2 .right, .banner4 .right{
   width: 423px;
 }
 
 .banner2 .right .image, .banner4 .right .image{
   width: 35%;
+}
+
+.banner2 .right .texts, .banner4 .right .texts{
+  max-width: 65%;
 }
 
 .banner2 .right .texts, .banner4 .right .texts{
@@ -53,7 +59,7 @@ main, div .right, div .left, .texts, .blocks .block, .banner4 .blocks, .banner3,
   height: 168px;
 }
 
-.banner2 .right, .banner4 .right{
+.banner1 .right, .banner2 .right, .banner4 .right{
   flex-grow: 1;
 }
 
@@ -67,11 +73,21 @@ main, div .right, div .left, .texts, .blocks .block, .banner4 .blocks, .banner3,
   justify-content: center;
 }
 
+.title{
+  color: #9B0000;
+}
+
 /* Header lay out */
 
 header{
   height: 4rem;
   align-items: center;
+  background-color: #E4D6D6;
+}
+
+.logo-text{
+  align-items: center;
+  flex-grow: 1;
 }
 
 .nav-item{
@@ -80,31 +96,145 @@ header{
 
 .nav-phone{
   width: 100%;
+  align-items: center;
+  flex-grow: 1;
   justify-content: space-between;
 }
 
 /* First banner lay out */
+.banner1{
+  background-color: #E7E7E7;
+}
+
 .banner1 .image{
-  margin: 1rem 2.5rem 1rem 0;
+  margin: 2rem 1.5rem 2rem 0;
+  max-width: 100%;
+}
+
+.banner1 img{
+  width: 100%;
+}
+
+.banner1 .right{
+  justify-content: center;
+}
+
+.banner1 .texts{
+  max-width: 90%;
+}
+
+.banner1 .texts div:nth-child(2){
+font-weight: bold;
+}
+
+.banner1 .texts div:nth-child(3){
+  text-align: center;
+  color: white;
+  background: #9B0000;
+  padding: 0.5rem;
+  margin-top: 2rem;
+}
+
+/* Second banner lay out */
+.banner2 .left .image{
+  margin: 2rem 1.5rem 2rem 0;
+  max-width: 100%;
+}
+
+.banner2 img{
+  width: 100%;
+}
+
+.banner2 .right .texts div:nth-child(3){
+  color: #E60000;
 }
 
 /* Third banner lay out */
-.banner3 .block{
-  margin: 1rem;
+.banner3{
+  background-color: #E7E7E7;
+}
+
+.banner3 .title{
+  text-align: center;
 }
 
 .block2{
-  max-height: 220px;
+  height: 220px;
+}
+
+.banner3 img{
+  width: 100%;
+}
+
+.block2 .texts{
+  height: 100%;
+  padding: 1rem 0 0 1rem;
+  color: red;
+}
+
+.block2 .text{
+  padding: 0.5rem 0;
+}
+
+/* Fourth banner lay out */
+.banner4 .title{
+  text-align: center;
+}
+
+.banner4 .left .video{
+  max-width: 100%;
+}
+
+.banner4 video{
+  width: 100%;
+}
+
+.banner4 img{
+  width: 100%;
+}
+
+/* Footer lay out */
+footer {
+  align-items: center;
+  background-color: #E4D6D6;
+}
+
+footer .texts2 .text{
+  margin-left: .5rem;
 }
 
 /* Desktop size */
 @media only screen and (min-width: 480px){
-  .banner0, .nav-phone{
+  .banner0, .nav-phone, .banner2 .phone{
     display: none;
   }
 
-  header, main, footer{
-    padding-left: 1.5rem;
+  /*header, main, footer{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }*/
+
+  .title{
+  font-size: 2.5rem;
+  }
+
+  .banner2 .right {
+    margin-top: 2rem;
+    margin-left: 1rem;
+  }
+
+  .banner3 .block{
+    margin: 1rem;
+    max-width: 30%;
+  }
+
+  .banner4 .right {
+    margin-top: 2rem;
+    margin-left: 1rem;
+  }
+
+  .banner4 .left .video{
+    margin: 2rem 1rem 1.5rem 0;
   }
 }
 
@@ -114,12 +244,16 @@ header{
     padding-left: 1rem;
   }
 
+  header{
+    width: 100%;
+  }
+
   .banner0{
     height: 180px;
   }
 
-  .logo-text, .nav, .banner1 .left, .banner2 .left, .banner3 .image,
-  .banner3 .text, .banner4 .right, .banner4 .left .texts, footer .text2{
+  .logo-text, .nav, .banner1 .left, .banner2 .left, .banner2 .desktop, .banner3 .image,
+  .banner3 .text, .banner4 .right, .banner4 .left .texts, footer .texts2{
     display: none;
   }
 
