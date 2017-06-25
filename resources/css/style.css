@@ -237,7 +237,6 @@ font-weight: bold;
 /* Fourth banner lay out */
 .banner4 .title{
   text-align: center;
-  padding: 2rem 0;
 }
 
 .banner4 .left .video{
@@ -246,6 +245,10 @@ font-weight: bold;
 
 .banner4 video{
   width: 100%;
+}
+
+.banner4 .left .texts div:nth-child(2){
+  padding-bottom: 2rem;
 }
 
 .banner4 .right{
