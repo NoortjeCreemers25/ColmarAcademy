@@ -80,6 +80,7 @@ strong{
 
 .title{
   color: #9B0000;
+  font-size: 2.5rem;
 }
 
 header, footer, .banner1, .banner2, .banner3, .banner4{
@@ -124,13 +125,6 @@ header{
   margin-left: 0.75rem;
 }
 
-.nav-phone{
-  width: 100%;
-  align-items: center;
-  flex-grow: 1;
-  justify-content: space-between;
-}
-
 /* First banner lay out */
 .banner1{
   background-color: #E7E7E7;
@@ -148,10 +142,6 @@ header{
 .banner1 .right{
   justify-content: center;
   margin-left: 1rem;
-}
-
-.banner1 .texts{
-  max-width: 80%;
 }
 
 .banner1 .texts div:nth-child(1){
@@ -189,15 +179,6 @@ font-weight: bold;
   padding-bottom: 1.5rem;
 }
 
-.banner2 .right{
-  margin-top: 0rem;
-  border-left: 1px solid #E7E7E7;
-}
-
-.banner2 .right .block{
-  border-bottom: 1px solid #E7E7E7;
-}
-
 .banner2 img{
   width: 100%;
 }
@@ -231,12 +212,13 @@ font-weight: bold;
 }
 
 .banner3 .row{
-  padding: 0 5rem;
+  padding: 0 5rem 2rem 5rem;
 }
 
 /* Fourth banner lay out */
 .banner4 .title{
   text-align: center;
+  padding-top: 2rem;
 }
 
 .banner4 .left .video{
@@ -296,9 +278,27 @@ footer .texts2 .text{
   font-size: 2.5rem;
   }
 
+  .highlight{
+    background-color: #E4D6D6;
+  }
+
+  .banner1 .texts{
+    max-width: 80%;
+  }
+
   .banner2 .right {
     margin-top: 2rem;
     margin-left: 1rem;
+  }
+
+  .banner2 .right{
+    padding-top: 1rem;
+    margin-top: 0rem;
+    border-left: 1px solid #E7E7E7;
+  }
+
+  .banner2 .right .block{
+    border-bottom: 1px solid #E7E7E7;
   }
 
   .banner3 .block{
@@ -318,21 +318,47 @@ footer .texts2 .text{
 
 /* Phone size */
 @media only screen and (max-width: 480px){
-  header, main, footer{
-    padding-left: 1rem;
+  .flexcontainer{
+    padding: 0px;
   }
 
-  header{
+
+  .nav-phone{
     width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem 0;
   }
 
   .banner0{
     height: 180px;
   }
 
+  .banner1 .texts{
+    max-width: 100%;
+  }
+
+  .banner1 .texts div:nth-child(1){
+    padding: 2rem 0 0 0;
+    max-width: 80%;
+  }
+
+  .banner1 .texts div:nth-child(2){
+    padding: 2rem 0 1.5rem 0;
+    max-width: 80%;
+  }
+
+  .banner1 .texts div:nth-child(3){
+    margin: 0 1rem 2rem 0;
+  }
+
   .logo-text, .nav, .banner1 .left, .banner2 .left, .banner2 .desktop, .banner3 .image,
-  .banner3 .text, .banner4 .right, .banner4 .left .texts, footer .texts2{
+  .banner3 .texts div:nth-child(1n + 2), .banner4 .right, .banner4 .left .texts, footer .texts2{
     display: none;
+  }
+
+  .banner2 .texts{
+    margin-left: 2rem;
   }
 
   .banner2 .block, .banner3 .blocks{
@@ -341,5 +367,46 @@ footer .texts2 .text{
 
   .banner2 .right .image, .banner4 .left{
     width: 100%;
+  }
+
+  .banner2 .right .texts div:nth-child(1){
+    padding-top: 1rem;
+  }
+
+  .banner2{
+    padding-bottom: 2rem;
+  }
+
+  .banner3 .texts div:nth-child(1){
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+  }
+
+  .banner3 .block{
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .banner3 .row{
+    padding: 0 1rem 2rem 1rem;
+  }
+
+  .banner3 .texts{
+    background: white;
+    padding: 1rem;
+    max-height: 3rem;
+    margin: 0.5rem;
+  }
+
+  .banner4 .title{
+    padding: 2rem;
+  }
+
+  .banner4 video{
+    padding-bottom: 1.5rem;
+  }
+
+  footer .text{
+    padding-left: 1rem;
   }
 }
