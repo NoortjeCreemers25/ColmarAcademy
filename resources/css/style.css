@@ -123,6 +123,13 @@ header{
 
 .nav-item{
   margin-left: 0.75rem;
+  padding: 0.5rem;
+  transition: background 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.nav-item:hover{
+  background: #9B0000;
+  color: white;
 }
 
 /* First banner lay out */
@@ -159,6 +166,12 @@ font-weight: bold;
   background: #9B0000;
   padding: 0.5rem;
   margin-top: 2rem;
+  opacity: 0.8;
+  transition: opacity 0.15s ease-in-out;
+}
+
+.banner1 .texts div:nth-child(3):hover{
+  opacity: 1;
 }
 
 /* Second banner lay out */
@@ -189,6 +202,11 @@ font-weight: bold;
 
 .banner2 .right .texts div:nth-child(3){
   color: #E60000;
+  transition: text-decoration 0.15s ease-in-out;
+}
+
+.banner2 .right .texts div:nth-child(3):hover{
+  text-decoration: underline;
 }
 
 /* Third banner lay out */
@@ -209,6 +227,11 @@ font-weight: bold;
   background: white;
   padding: 1rem;
   height: 12rem;
+  transition: background .15s ease-in-out;
+}
+
+.banner3 .texts:hover{
+  background: #E4D6D6;
 }
 
 .banner3 .row{
@@ -251,7 +274,6 @@ font-weight: bold;
   padding: 1rem;
 }
 
-
 /* Footer lay out */
 footer {
   align-items: center;
@@ -261,21 +283,17 @@ footer {
 
 footer .texts2 .text{
   margin-left: .5rem;
+  transition: text-decoration 0.15s ease-in-out;
+}
+
+footer .texts2 .text:hover{
+  text-decoration: underline;
 }
 
 /* Desktop size */
 @media only screen and (min-width: 480px){
   .banner0, .nav-phone, .banner2 .phone{
     display: none;
-  }
-
-  /*header, main, footer{
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-  }*/
-
-  .title{
-  font-size: 2.5rem;
   }
 
   .highlight{
@@ -316,12 +334,23 @@ footer .texts2 .text{
   }
 }
 
+/* Ipad size */
+@media only screen and (min-width: 480px) and (max-width: 961px){
+  .banner3 .block{
+    margin: 1rem;
+    max-width: 40%;
+  }
+
+  .banner3 .row{
+    padding: 0 2rem 2rem 2rem;
+  }
+}
+
 /* Phone size */
 @media only screen and (max-width: 480px){
   .flexcontainer{
     padding: 0px;
   }
-
 
   .nav-phone{
     width: 100%;
@@ -332,6 +361,11 @@ footer .texts2 .text{
 
   .banner0{
     height: 180px;
+    width: 100%;
+  }
+
+  .banner0 img{
+    width: 100%;
   }
 
   .banner1 .texts{
