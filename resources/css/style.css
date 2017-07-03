@@ -245,7 +245,7 @@ a,a:link,a:visited{
 }
 
 .banner3 .texts .text{
-  max-width: 100%;
+  width: 100%;
 }
 
 .banner3 .texts:hover{
