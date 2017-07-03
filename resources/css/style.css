@@ -20,52 +20,12 @@ html{
   display: -ms-flexbox;
 }
 
-header, footer {
-  justify-content: space-between;
-}
-
-.nav {
-  justify-content: space-around;
-}
-
-main, div .right, div .left, .texts, .banner3 .blocks .block, .banner4 .blocks, .banner3, .banner4{
-  flex-direction: column;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-}
-
 strong{
   font-weight: bold;
 }
 
-.banner2 .right{
-  align-items: flex-start;
-}
-
-.banner1 .right, .banner2 .right, .banner4 .right{
-  width: 423px;
-}
-
-.banner2 .right .image, .banner4 .right .image{
-  width: 35%;
-  justify-content: flex-start;
-}
-
-.banner2 .right .texts, .banner4 .right .texts{
-  max-width: 65%;
-}
-
-.banner2 .right .texts, .banner4 .right .texts{
-  flex-grow: 1;
-  justify-content: flex-start;
-}
-
-.banner4 .right .block{
-  height: 168px;
-}
-
-.banner1 .right, .banner2 .right, .banner4 .right{
-  flex-grow: 1;
+.nav {
+  justify-content: space-around;
 }
 
 .left {
@@ -78,14 +38,64 @@ strong{
   font-size: 2.5rem;
 }
 
+main, div .right, div .left, .texts, .banner3 .blocks .block, .banner4 .blocks, .banner3, .banner4{
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+}
+
 header, footer, .banner1, .banner2, .banner3, .banner4{
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
 
-.banner2 .right .texts div:nth-child(3),
-.banner3 .texts div:nth-child(3){
-  padding: 0.5rem 0;
+header, footer {
+  justify-content: space-between;
+}
+
+.banner1 .right, .banner2 .right, .banner4 .right{
+  width: 423px;
+  flex-grow: 1;
+}
+
+/* Right side of banner 2 and 4 lay out */
+.banner2 .right, .banner4 .right{
+  align-items: flex-start;
+}
+
+.banner2 .right .image, .banner4 .right .image{
+  width: 35%;
+  justify-content: flex-start;
+}
+
+.banner2 .right .texts, .banner4 .right .texts{
+  width: 65%;
+  justify-content: flex-start;
+}
+
+.banner2 .right .block img, .banner4 .right .block img{
+  padding: 1rem;
+  width: 100%;
+}
+
+.banner4 .right{
+  margin-top: 0rem;
+  border-left: 1px solid #E7E7E7;
+}
+
+.banner4 .right .block{
+  padding: 0 0 2rem 0;
+  border-bottom: 1px solid #E7E7E7;
+}
+
+/* Texts in blocks lay out */
+.banner2 .right .texts div:nth-child(1),
+.banner3 .texts div:nth-child(1),
+.banner4 .texts div:nth-child(1){
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 
 .banner2 .right .texts div:nth-child(2),
@@ -94,13 +104,9 @@ header, footer, .banner1, .banner2, .banner3, .banner4{
   padding: 0.5rem 0;
 }
 
-.banner2 .right .texts div:nth-child(1),
-.banner3 .texts div:nth-child(1),
-.banner4 .texts div:nth-child(1){
-  padding-top: 1.5rem;
-  padding-bottom: 0.5rem;
-  font-weight: bold;
-  font-size: 1.25rem;
+.banner2 .right .texts div:nth-child(3),
+.banner3 .texts div:nth-child(3){
+  padding: 0.5rem 0;
 }
 
 /* Header lay out */
@@ -192,12 +198,8 @@ a,a:link,a:visited{
   padding-bottom: 1.5rem;
 }
 
-.banner2 img{
+.banner2 .left img{
   width: 100%;
-}
-
-.banner2 .right .block img:nth-child(1){
-  padding: 1rem;
 }
 
 .banner2 .right .texts div:nth-child(3){
@@ -267,24 +269,6 @@ a,a:link,a:visited{
   padding-bottom: 2rem;
 }
 
-.banner4 .right{
-  margin-top: 0rem;
-  border-left: 1px solid #E7E7E7;
-}
-
-.banner4 .right .block{
-  padding: 0 0 2rem 0;
-  border-bottom: 1px solid #E7E7E7;
-}
-
-.banner4 img{
-  width: 100%;
-}
-
-.banner4 .right img{
-  padding: 1rem;
-}
-
 /* Footer lay out */
 footer {
   align-items: center;
@@ -316,14 +300,14 @@ footer .texts2 .text:hover{
   }
 
   .banner2 .right {
-    margin-top: 2rem;
     margin-left: 1rem;
+    margin-top: 0rem;
+    padding-top: 1rem;
+    border-left: 1px solid #E7E7E7;
   }
 
-  .banner2 .right{
-    padding-top: 1rem;
-    margin-top: 0rem;
-    border-left: 1px solid #E7E7E7;
+  .banner2 .right .block, .banner4 .right .block{
+    height: 168px;
   }
 
   .banner2 .right .block{
@@ -427,9 +411,9 @@ footer .texts2 .text:hover{
     padding-bottom: 0rem;
   }
 
-.banner3 .blocks{
-  align-items: center;
-}
+  .banner3 .blocks{
+    align-items: center;
+  }
 
   .banner3 .block{
     width: 300px;
