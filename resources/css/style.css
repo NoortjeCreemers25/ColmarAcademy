@@ -16,6 +16,8 @@ html{
 
 .flexcontainer{
   display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
 }
 
 header, footer {
@@ -26,16 +28,14 @@ header, footer {
   justify-content: space-around;
 }
 
-main, div .right, div .left, .texts, .blocks .block, .banner4 .blocks, .banner3, .banner4, .block2{
+main, div .right, div .left, .texts, .banner3 .blocks .block, .banner4 .blocks, .banner3, .banner4{
   flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
 }
 
 strong{
   font-weight: bold;
-}
-
-.left{
-  width: 60%;
 }
 
 .banner2 .right{
@@ -68,14 +68,9 @@ strong{
   flex-grow: 1;
 }
 
-.banner3 .blocks{
-  justify-content: center;
-  width: 100%;
-  flex-wrap: wrap;
-}
-
 .left {
   justify-content: center;
+  width: 60%;
 }
 
 .title{
@@ -152,12 +147,12 @@ header{
 }
 
 .banner1 .texts div:nth-child(1){
-font-weight: bold;
-padding-bottom: 1rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
 }
 
 .banner1 .texts div:nth-child(2){
-font-weight: bold;
+  font-weight: bold;
 }
 
 .banner1 .texts div:nth-child(3){
@@ -177,8 +172,6 @@ font-weight: bold;
 a,a:link,a:visited{
   text-decoration: none;
   color: white;
-}
-
 }
 
 /* Second banner lay out */
@@ -224,6 +217,17 @@ a,a:link,a:visited{
 .banner3 .title{
   text-align: center;
   padding: 2rem 0;
+}
+
+.banner3 .blocks{
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.banner3 .block{
+  max-width: 300px;
 }
 
 .banner3 img{
@@ -328,7 +332,7 @@ footer .texts2 .text:hover{
 
   .banner3 .block{
     margin: 1rem;
-    max-width: 30%;
+    max-width: 300px;
   }
 
   .banner4 .right {
@@ -345,7 +349,7 @@ footer .texts2 .text:hover{
 @media only screen and (min-width: 480px) and (max-width: 961px){
   .banner3 .block{
     margin: 1rem;
-    max-width: 40%;
+    max-width: 400px;
   }
 
   .banner3 .row{
@@ -423,8 +427,12 @@ footer .texts2 .text:hover{
     padding-bottom: 0rem;
   }
 
+.banner3 .blocks{
+  align-items: center;
+}
+
   .banner3 .block{
-    max-width: 100%;
+    width: 300px;
     justify-content: center;
   }
 
@@ -435,8 +443,9 @@ footer .texts2 .text:hover{
   .banner3 .texts{
     background: white;
     padding: 1rem;
-    max-height: 3rem;
+    height: 50px;
     margin: 0.5rem;
+    justify-content: center;
   }
 
   .banner4 .title{
